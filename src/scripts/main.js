@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ageValue = parseInt(inputAge.value, 10);
     const salaryValue = parseInt(inputSalary.value, 10);
     const nameRegex = /^[\p{L}\s]+$/u;
+    const positionRegex = /^[\p{L}\s\d\-.]+$/u;
 
     if (nameValue.length < 4 || !nameRegex.test(nameValue)) {
       return showNotification(
@@ -141,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     }
 
-    if (!nameRegex.test(positionValue)) {
-      return showNotification('Error', 'Invalid position input', 'error');
+    if (!positionRegex.test(positionValue)) {
+      return showNotification('Error', 'Invalid position input', 'warning');
     }
 
     if (isNaN(ageValue) || ageValue < 18 || ageValue > 90) {
