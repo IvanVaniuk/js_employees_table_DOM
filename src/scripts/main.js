@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="San Francisco">San Francisco</option>
         </select>
       </label>
-      <label>Age: <input type="text" data-qa="age" required></label>
-      <label>Salary: <input type="text" data-qa="salary" required></label>
+      <label>Age: <input type="number" data-qa="age" required></label>
+      <label>Salary: <input type="number" data-qa="salary" required></label>
       <button type="submit">Save to table</button>
     `,
   );
